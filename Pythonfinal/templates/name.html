@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>名字全称应用</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/materialize.min.css">
+    <link rel="stylesheet" href="../static/tooplate.css">
+</head>
+
+<body id="name">
+    <div class="container">
+        <div class="row tm-register-row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-register-col-l">
+                <form method="post" action="/result">
+                    <div class="mb-2">
+                        <label class="mr-4">
+                            <input class="with-gap" name="title" type="radio" value="mr" />
+                            <span>Mr.</span>
+                        </label>
+                        <label class="mr-4">
+                            <input class="with-gap" name="title" type="radio" value="ms" />
+                            <span>Ms.</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="title" type="radio" value="mrs" />
+                            <span>Mrs.</span>
+                        </label>
+                    </div>
+
+                    <div class="input-field">
+                        <input placeholder="First Name" id="first_name" name="firstname" type="text" class="validate">
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Last Name" id="last_name" name="lastname" type="text" class="validate">
+                    </div>
+                    <div class="tm-flex-lr">
+                        <a href="{{ url_for ('index') }}" class="white-text small">想回到首页?</a>
+                        <button type="submit" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">提交</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-register-col-r">
+                <header class="mb-5">
+                    <h3 class="mt-0 text-white">名字全称应用</h3>
+                    <p class="grey-text">启动程序后，让用户在输入框输入名字全称，
+                       </p>
+                    <p class="grey-text">然后即可根据用户输入的内容显示用户名字全称结果页。
+                    </p>
+                </header>
+            </div>
+        </div>
+    <footer class="row tm-mt-big mb-3">
+        <div class="col-xl-12 text-center font-weight-light">
+            <p class="d-inline-block tm-bg-black white-text py-2 tm-px-5">
+                Juicy &copy; 2021 Final Project - Course:
+                <a rel="nofollow" href="https://www.python.org" class="tm-footer-link">Python</a>
+            </p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

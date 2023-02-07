@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>元音字母词频统计</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/materialize.min.css">
+    <link rel="stylesheet" href="../static/tooplate.css">
+</head>
+<style>
+
+</style>
+
+<body id="vowels">
+    <div class="container">
+        <div class="row tm-register-row tm-mb-35">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-login-l">
+                <form action="/results" method="post" class="tm-bg-black p-5 h-100">
+                    <div class="input-field">
+                        <input placeholder="(请输入一个您想要查询的单词)" id="username" name="word" type="text" class="validate">
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="(请输入一个您想要查询的元音字母)" id="username" name="vowels" type="text" class="validate">
+                    </div>
+                    <div class="tm-flex-lr">
+                        <a href="{{ url_for ('index') }}" class="white-text small">想回到首页?</a>
+                        <button type="submit" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">提交</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-login-r">
+                <header class="font-weight-light tm-bg-black p-5 h-100">
+                    <h3 class="mt-0 text-white font-weight-light">元音字母词频统计</h3>
+                    <p>用户在输入框输入单词和元音字母进行查询，</p>
+                    <p class="mb-0">查询结果页面会显示用户输入的元音字母词频统计数。</p>
+                </header>
+            </div>
+        </div>
+
+    <footer class="row tm-mt-big mb-3">
+        <div class="col-xl-12 text-center font-weight-light">
+            <p class="d-inline-block tm-bg-black white-text py-2 tm-px-5">
+                Juicy &copy; 2021 Final Project - Course:
+                <a rel="nofollow" href="https://www.python.org" class="tm-footer-link">Python</a>
+            </p>
+        </div>
+    </footer>
+    </div>
+
+</body>
+
+</html>

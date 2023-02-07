@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../static/tooplate.css">
+    <style>
+        .container {
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            color: #343434;
+        }
+        .container h1 {
+            font-size: 100px;
+            color: #ffffff;
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: 20px;
+            /* background: url(../static/register.jpg) center no-repeat; */
+        }
+        .container h2 {
+            color: #ffffff;
+        }
+        .container a {
+            text-decoration: none;
+            border: none;
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 12px 24px;
+            margin-top: 60px;
+            display: inline-block;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: 0.4s;
+        }
+        .container a:hover {
+            background: #cccccc;
+        }
+    </style>
+</head>
+<body id="survey" class="font-weight-light">
+    <div class="container">
+        <div class="tm-black-bg tm-contact-text-container">
+            <h2 class="tm-text-primary">夜袭杂物社欢迎您</h2>
+            <form action="/list" method="post">
+            <h2>请选择您想购买的商品</h2>
+                <p>
+                    {% for product in products %}
+                        <input type="checkbox" name="list" value="{{ product[0] }}">{{ product[0] }}----------{{ product[1] }}<br>
+                </p>
+                {% endfor %}
+                    <div class="text-center mt-5">
+                        <button type="submit" class="waves-effect btn-large btn-large-white">提交</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

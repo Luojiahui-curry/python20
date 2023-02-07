@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名字全称结果</title>
+    <link rel="stylesheet" href="../static/tooplate.css">
+    <style>
+
+        .container {
+            width: 100%;
+            position: absolute;
+            top: 25%;
+            {#transform: rotateY(-50%);#}
+            text-align: center;
+            color: #343434;
+        }
+
+        .container h1 {
+            font-size: 100px;
+            color: #ffffff;
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: 20px;
+            /* background: url(../static/register.jpg) center no-repeat; */
+        }
+
+        .container a {
+            text-decoration: none;
+            border: none;
+            background: #000000;
+            color: #fff;
+            padding: 12px 24px;
+            margin-top: 60px;
+            display: inline-block;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: 0.4s;
+        }
+
+        .container a:hover {
+            background: #cccccc;
+        }
+    </style>
+</head>
+
+<body id="survey">
+    <div class="bg"></div>
+    <div class="container">
+        <h1>很高兴认识你</h1><br>
+        <h1>{{name}}</h1>
+        <a href="{{ url_for ('index') }}">回到首页</a>
+    </div>
+</body>
+
+</html>
