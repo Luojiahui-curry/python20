@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>罗嘉慧Python期末项目</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/materialize.min.css">
+    <link rel="stylesheet" href="../static/tooplate.css">
+</head>
+
+<body id="home">
+    <div class="container tm-home-mt tm-home-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="tm-home-left">
+                    <h1 class="tm-site-title">Python 期末项目</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="tm-home-left mt-3 font-weight-light">
+                    <p class="tm-mb-35">该项目将使用python语言以及Flask框架、Bootstrap作为前端页面的技术栈，来搭建第一个Web应用程序，初步实现一个简易Web应用。本应用是基于Python语言和Flask框架进行搭建的一个简易Web应用。主要实现名字全称、元音字母词频统计以及购物清单三个主要功能应用。</p>
+                    <p>如有错误请指出，非常感谢！</p>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <ul class="list-group tm-home-list tm-bg-black font-weight-light">
+                    <li class="d-flex justify-content-between align-items-center">
+                        <a href="{{ url_for ('fullname') }}">01. 名字全称应用 </a>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center">
+                        <a href="{{ url_for ('words') }}">02. 元音字母词频统计</a>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center">
+                        <a href="{{ url_for ('shopping') }}" class="tm-white-text">03. 购物车</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="row tm-mt-big mb-3">
+        <div class="col-xl-12 text-center font-weight-light">
+            <p class="d-inline-block tm-bg-black white-text py-2 tm-px-5">
+                Juicy &copy; 2021 Final Project - Course:
+                <a rel="nofollow" href="https://www.python.org" class="tm-footer-link">Python</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
